@@ -1,0 +1,26 @@
+{
+  "extends": ["airbnb", "prettier"],
+  "env": {
+    "browser": true
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@animations", "./lib/animations"],
+          ["@components", "./lib/components"],
+          ["@sections", "./lib/sections"],
+          ["@style", "./lib/style"]
+        ],
+        "extensions": [".js", ".jsx"]
+      }
+    }
+  },
+  "rules": {
+    "react/jsx-props-no-spreading": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "react/jsx-one-expression-per-line": 0
+  }
+}
