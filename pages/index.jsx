@@ -3,14 +3,17 @@ import Fade from 'react-reveal/Fade'
 
 import Header from '@sections/Header'
 import Intro from '@sections/index/Intro'
+import Members from '@sections/index/Members'
 import Topics from '@sections/index/Topics'
 import Principles from '@sections/index/Principles'
 import Progress from '@sections/index/Progress'
 import SlidingFooter from '@sections/index/SlidingFooter'
 import TopicAnimationWrapper from '@sections/TopicAnimationWrapper'
+import MembersData from '@sections/MembersData'
 
 import LinkArrow from '@components/LinkArrow'
 import LinkAction from '@components/LinkAction'
+import ModalCard from '@components/ModalCard'
 
 import Box from '@animations/index/box/Box'
 import Programmer from '@animations/index/programmer/Programmer'
@@ -23,24 +26,43 @@ const Index = () => {
     <>
       <Header />
       <Intro>
-        <h1>The Center for IOTA Innovation</h1>
+        <h1>A New Center for IOTA Innovation</h1>
         <p>
-          Tangle EE is an IOTA working group collaboration with the Eclipse Foundation: A governed environment for organizations
-          and contributors to develop new ideas and applications using IOTA technology.
+          Tangle EE is a working group collaboration with the Eclipse Foundation. It provides a governed environment for
+          organizations and contributors to develop new ideas and applications using IOTA technologies.
         </p>
-        <LinkAction to="/">Learn more</LinkAction>
+        <LinkAction to="/projects">Learn more</LinkAction>
       </Intro>
+      <Members>
+        <h2>
+          Our Members <LinkArrow to="/members">View member page</LinkArrow>
+        </h2>
+        <ul>
+          {MembersData.map((member) => {
+            return (
+              <ModalCard
+                key={member.name}
+                logo={member.logo}
+                title={member.name}
+                description={member.description}
+                url={member.url}
+              />
+            )
+          })}
+        </ul>
+        <LinkArrow to="/members">View member page</LinkArrow>
+      </Members>
       <Topics>
         <article>
           <div>
             <Fade bottom duration={800} distance="10%">
-              <h2>Tangle EE increases commercial collaboration</h2>
+              <h2>Streamlining Development on IOTA</h2>
               <p>
-                Tangle EE provides a governed environment for new task forces starting with Digital Identity and Industry
-                Marketplaces. Organizations can now join the Tangle EE working group to shape the development of exciting new
-                future technologies. CTA: View Task Forces
+                Tangle EE provides a governance framework for building projects on IOTA. Organizations can now join the Tangle EE
+                working group and shape the development of exciting future technologies, starting with Unified Identity and
+                Decentralized Marketplaces.
               </p>
-              <LinkAction to="/working-group">View Task Forces</LinkAction>
+              <LinkAction to="/projects">View Projects</LinkAction>
             </Fade>
           </div>
           <aside>
@@ -52,14 +74,12 @@ const Index = () => {
         <article>
           <div>
             <Fade bottom duration={800} distance="10%">
-              <h2>A Governance Framework for Task Forces</h2>
+              <h2>Strengthening Commercial Collaboration</h2>
               <p>
-                Tangle EE provides a legal and regulatory environment for the development process. This process drives large and
-                small projects alike and allows open, governed contributions from a wider range of organisations and individuals.
+                Tangle EE is an environment for organizations from across business and academia to work together. The group will
+                develop new open-source solutions and provide thought-leadership in key IOTA use case areas.
               </p>
-              <LinkAction to="https://www.eclipse.org/projects/dev_process/" target="_blank">
-                How it works
-              </LinkAction>
+              <LinkAction to="/organizations">Join as an Organization</LinkAction>
             </Fade>
           </div>
           <aside>
@@ -71,15 +91,12 @@ const Index = () => {
         <article>
           <div>
             <Fade bottom duration={800} distance="10%">
-              <h2>Accelerating Growth in IOTA Innovation</h2>
+              <h2>Growing IOTA's Ecosystem</h2>
               <p>
-                Tangle EE brings both the existing ecosystems of IOTA and Eclipse together, including development and intellectual
-                resource, with the opportunity for project committers to actively participate in groundbreaking decentralised
-                technology.
+                Tangle EE brings the IOTA and Eclipse ecosystems together. Combining intellectual and development resources, we
+                accelerate IOTA's innovation and adoption.
               </p>
-              <LinkAction to="https://www.eclipse.org/contribute/" target="_blank">
-                How to contribute
-              </LinkAction>
+              <LinkAction to="/developers">For Developers</LinkAction>
             </Fade>
           </div>
           <aside>
@@ -103,7 +120,7 @@ const Index = () => {
               <h4>Improved Governance</h4>
               <p>
                 Tangle EE gives both industry and our community a{' '}
-                <span className="bold">shared legal and licensing framework</span> so they can focus on technology, knowing that
+                <span className="bold">shared legal and licensing framework</span> so they can focus on development, knowing that
                 any projects can be <span className="bold">safely distributed as commercial products</span>.
               </p>
             </li>
@@ -125,8 +142,8 @@ const Index = () => {
               <h4>Open Source</h4>
               <p>
                 The Eclipse Foundation is a non-profit open-source organization that is{' '}
-                <span className="bold"> supported by over 275 organisational members</span>. The foundation is home to frameworks
-                for a wide range of technology domains including IoT, automotive, geospatial and systems engineering.
+                <span className="bold">supported by over 275 organizational members</span>. The foundation is home to frameworks
+                for a wide range of technology domains including IoT, automotive and systems engineering.
               </p>
             </li>
           </Fade>
@@ -145,14 +162,13 @@ const Index = () => {
       </Principles>
       <Progress>
         <Fade bottom duration={800} distance="10%">
-          <h2>Tangle EE: enabling a platform for industry contributions using IOTA</h2>
-          <p>Tangle EE is already working to develop IOTA technology solutions to accelerate adoption.</p>
+          <h2>Follow the Progress of Tangle EE as it Develops</h2>
           <p>
-            Initial target industries for Tangle EE’s commercialization of IoT payments infrastructure include Mobility and
-            Automotive, Global Trade and Supply Chain, eHealth, Smart Energy (including Smart Cities), and Industrial IoT.
+            Tangle EE is already working to accelerate commercial adoption of IOTA. We launch with projects for Decentralized
+            Identity and Decentralized Marketplaces.
           </p>
-          <p>New uses-cases and projects are in regular development.</p>
-          <LinkAction to="/">Register for updates</LinkAction>
+          <p>You can follow the ongoing development through the Tangle EE mailing list.</p>
+          <LinkAction to="https://accounts.eclipse.org/mailing-list/tangle.ee-wg">Join the mailing list</LinkAction>
         </Fade>
       </Progress>
       <SlidingFooter>
@@ -168,7 +184,7 @@ const Index = () => {
             <StandingProgrammer />
           </LinkArrow>
           <LinkArrow to="/organizations">
-            <strong>Organisations</strong>
+            <strong>Organizations</strong>
             <small>Learn more about the Eclipse Foundation and the benefits it offers.</small>
             <StandingLady />
           </LinkArrow>

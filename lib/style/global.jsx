@@ -19,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     width: 100%;
     height: 100%;
-    background: #f4fbfd;
+    background: #ffffff;
     color: #595968;
     -webkit-font-smoothing: antialiased;
   }
@@ -28,7 +28,15 @@ const GlobalStyle = createGlobalStyle`
     overflow: hidden;
     &.loaded{
       overflow: inherit;
+      overflow-x: hidden;
     }
+  }
+
+  .motherwrapper{
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    width: 100%;
   }
 
   main {
@@ -94,6 +102,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Raleway', sans-serif;
     font-weight: 500;
     font-feature-settings: "liga" 0;
+    text-transform: capitalize;
   }
 
   h1 {

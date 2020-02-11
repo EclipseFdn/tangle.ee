@@ -20,31 +20,30 @@ const Header = () => {
           <HeaderLink activeClassName="active" href="/">
             <a href="/">Home</a>
           </HeaderLink>
-          <HeaderLink activeClassName="active" href="/developers">
-            <a href="/developers">For Developers</a>
-          </HeaderLink>
           <HeaderLink activeClassName="active" href="/organizations">
             <a href="/organizations">For Organizations</a>
           </HeaderLink>
-          <HeaderLink activeClassName="active" href="/working-group">
-            <a href="/working-group">Working Group</a>
+          <HeaderLink activeClassName="active" href="/developers">
+            <a href="/developers">For Developers</a>
           </HeaderLink>
-          <HeaderLink activeClassName="active" href="/community">
-            <a href="/community">Community</a>
+          <HeaderLink activeClassName="active" href="/projects">
+            <a href="/projects">Projects</a>
           </HeaderLink>
-          <HeaderLink activeClassName="active" href="/">
-            <a href="https://www.eclipse.org/contribute/" target="_blank" rel="noreferrer noopener">
-              Join Us
-            </a>
+          <HeaderLink activeClassName="active" href="/members">
+            <a href="/members">Members</a>
           </HeaderLink>
+          <HeaderLink activeClassName="active" href="/about">
+            <a href="/about">About IOTA</a>
+          </HeaderLink>
+          <a href="mailto:tangle-ee@iota.org">Contact</a>
           <div className="social">
-            <a href="https://facebook.com" target="_blank" rel="noreferrer noopener">
+            <a href="https://www.facebook.com/TheIOTAFoundation/" target="_blank" rel="noreferrer noopener">
               <img alt="facebook" src="/images/facebook-square.svg" />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noreferrer noopener">
+            <a href="https://www.instagram.com/iotafoundation/" target="_blank" rel="noreferrer noopener">
               <img alt="twitter" src="/images/twitter-square.svg" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer noopener">
+            <a href="https://www.linkedin.com/company/iotafoundation/" target="_blank" rel="noreferrer noopener">
               <img alt="linkedin" src="/images/linkedin.svg" />
             </a>
           </div>
@@ -151,6 +150,7 @@ const Wrapper = styled.header`
         font-size: 14px;
         height: 70px;
         line-height: 70px;
+        white-space: nowrap;
         &:last-of-type {
           padding: 0 32px;
           margin-left: 6px;

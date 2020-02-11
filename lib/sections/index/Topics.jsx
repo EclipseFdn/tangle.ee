@@ -50,20 +50,32 @@ const Wrapper = styled.section`
     }
 
     aside {
-      max-width: 50%;
+      max-width: 100%;
+    }
+
+    @media (max-width: 980px) {
+      aside {
+        max-width: 100%;
+      }
     }
 
     > div {
       padding: 60px 0;
       max-width: 460px;
 
-      a{
+      a {
         margin-bottom: 60px;
       }
 
       @media (max-width: 1190px) {
         max-width: none;
         padding: 0;
+      }
+
+      p:last-of-type {
+        @media (max-width: 980px) {
+          margin-bottom: 30px;
+        }
       }
     }
 

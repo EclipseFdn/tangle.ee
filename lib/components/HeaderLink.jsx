@@ -9,8 +9,9 @@ const HeaderLink = ({ router, children, activeClassName, href }) => {
   let className = child.props.className || ''
   if (router.pathname === href && href !== '/' && activeClassName) {
     className = `${className} ${activeClassName}`.trim()
+  } else if (router.pathname === href && href === '/' && activeClassName) {
+    className = `${className} ${activeClassName}`.trim()
   }
-
   return <Link href={href}>{React.cloneElement(child, { className })}</Link>
 }
 

@@ -31,6 +31,12 @@ const Wrapper = styled.section`
   z-index: 1;
   left: -50%;
 
+  @media (min-width: 1650px) {
+    width: 1610px;
+    height: auto;
+    left: -40%;
+  }
+
   @media (max-width: 1300px) {
     width: 100%;
     left: -60%;

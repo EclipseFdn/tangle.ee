@@ -23,12 +23,14 @@ const Landing = ({ children }) => (
         fill="url(#difference-1)"
         opacity=".9"
         transform="translate(-1324 -2019)"
+        className="circle-1"
       />
       <path
         d="M528.304 2730.503C25.83 2449.412-148.14 1817.332 139.74 1318.712 427.616 820.09 1068.327 643.75 1570.804 924.84c502.478 281.09 676.445 913.171 388.567 1411.791-287.878 498.62-928.589 674.962-1431.067 393.872z"
         fill="url(#difference-2)"
         opacity=".85"
         transform="translate(-1324 -2019)"
+        className="circle-2"
       />
     </svg>
     <article>{children}</article>
@@ -51,7 +53,7 @@ const Wrapper = styled.section`
   }
 
   @media (max-width: 980px) {
-    background: url('static/images/190226_long_tree_03.svg');
+    background: url('/images/190226_long_tree_03.svg');
     background-repeat: no-repeat;
     background-size: auto 90%;
     padding-top: 100px;
@@ -79,8 +81,8 @@ const Wrapper = styled.section`
     article {
       width: 50%;
 
-      h3{
-        margin-bottom: 100px;
+      h3 {
+        margin-bottom: 70px;
       }
 
       @media (max-width: 1300px) {
@@ -90,7 +92,7 @@ const Wrapper = styled.section`
       @media (max-width: 980px) {
         width: 100%;
 
-        h3{
+        h3 {
           margin-bottom: 32px;
         }
       }
@@ -104,6 +106,14 @@ const Wrapper = styled.section`
     left: 50%;
     transform: translate(-50%, 0);
     width: 100%;
+
+    path.circle-1 {
+      transform: translate(-1324px, -2019px);
+    }
+
+    path.circle-2 {
+      transform: translate(-1544px, -1969px);
+    }
 
     @media (max-width: 980px) {
       width: 200%;

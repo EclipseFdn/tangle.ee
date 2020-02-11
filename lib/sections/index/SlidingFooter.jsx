@@ -42,6 +42,12 @@ SlidingFooter.propTypes = {
 
 const Wrapper = styled.section`
   pointer-events: none;
+  overflow: hidden;
+
+  > div {
+    position: absolute;
+    width: 100%;
+  }
 
   article,
   footer {

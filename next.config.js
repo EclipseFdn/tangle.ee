@@ -1,6 +1,7 @@
 const path = require('path')
+const withCSS = require('@zeit/next-css')
 
-module.exports = {
+module.exports = withCSS({
   webpack: (input) => {
     const config = { ...input }
     config.resolve.alias['@animations'] = path.join(__dirname, './lib/animations')
@@ -9,4 +10,4 @@ module.exports = {
     config.resolve.alias['@style'] = path.join(__dirname, './lib/style')
     return config
   }
-}
+})

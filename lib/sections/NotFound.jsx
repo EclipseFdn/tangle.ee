@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import Dandelion from '@animations/notfound/dandelion'
 import Leaf from '@animations/notfound/leaf'
-import GrowingTree from '@animations/community/growingtree/GrowingTree'
+import GrowingTree from '@animations/about/growingtree/GrowingTree'
 
 const NotFound = () => {
   return (
@@ -85,6 +85,10 @@ const Wrapper = styled.section`
   align-items: center;
   justify-content: center;
   z-index: 0;
+
+  h3 {
+    text-transform: none;
+  }
 
   @media (max-width: 1190px) {
     min-height: calc(100vh - 60px);

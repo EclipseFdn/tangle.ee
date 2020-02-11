@@ -67,7 +67,7 @@ const Wrapper = styled.section`
     display: flex;
     flex-direction: row-reverse;
     width: 100%;
-    margin-bottom: 70px;
+    margin-bottom: 30px;
 
     > div,
     > h3 {
@@ -114,10 +114,10 @@ const Wrapper = styled.section`
       margin-bottom: 70px;
       position: relative;
       padding-bottom: 40px;
-      &:first-of-type {
-        margin-bottom: 0px;
-      }
-      &:not(:first-of-type):after {
+      // &:first-of-type {
+      //   margin-bottom: 0px;
+      // }
+      &:not(:last-of-type):after {
         content: '';
         position: absolute;
         bottom: 0;

@@ -1,58 +1,21 @@
-import React, { useEffect, useRef, useState } from 'react'
-import Slick from 'react-slick'
+import React from 'react'
+import Swiper from 'react-id-swiper'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-
-// Hook
-function useWindowSize() {
-  const isClient = typeof window === 'object'
-
-  function getSize() {
-    return {
-      width: isClient ? window.innerWidth : undefined,
-      height: isClient ? window.innerHeight : undefined
-    }
-  }
-
-  const [windowSize, setWindowSize] = useState(getSize)
-
-  useEffect(() => {
-    if (!isClient) {
-      return false
-    }
-
-    function handleResize() {
-      setWindowSize(getSize())
-    }
-
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, []) // Empty array ensures that effect is only run on mount and unmount
-
-  return windowSize
-}
 
 const Slider = ({ children, settings }) => {
   const sliderSettings = {
     ...settings,
-    nextArrow: <CustomArrow type="next" />,
-    prevArrow: <CustomArrow type="prev" />
+    navigation: {
+      nextEl: '.custom-swiper-button-next',
+      prevEl: '.custom-swiper-button-prev'
+    },
+    renderPrevButton: () => <CustomArrow className="custom-swiper-button-prev" type="prev" />,
+    renderNextButton: () => <CustomArrow className="custom-swiper-button-next" type="next" />
   }
-  const slickRef = useRef(null)
-  const size = useWindowSize()
-  useEffect(() => {
-    if (size.width < 630) {
-      slickRef.current.slickPrev()
-      setTimeout(() => {
-        slickRef.current.slickNext()
-      }, 200)
-    }
-  }, [])
   return (
     <Wrapper>
-      <Slick ref={slickRef} {...sliderSettings}>
-        {children}
-      </Slick>
+      <Swiper {...sliderSettings}>{children}</Swiper>
     </Wrapper>
   )
 }
@@ -94,10 +57,16 @@ const CustomArrow = ({ className, style, onClick, type }) => {
 }
 
 CustomArrow.propTypes = {
-  className: PropTypes.string.isRequired,
-  style: PropTypes.shape().isRequired,
-  onClick: PropTypes.func.isRequired,
+  className: PropTypes.string,
+  style: PropTypes.shape(),
+  onClick: PropTypes.func,
   type: PropTypes.string.isRequired
+}
+
+CustomArrow.defaultProps = {
+  className: '',
+  style: null,
+  onClick: () => {}
 }
 
 Slider.propTypes = {
@@ -106,132 +75,47 @@ Slider.propTypes = {
 }
 
 const Wrapper = styled.div`
-  width: 120vw;
-  margin: 0 auto;
   position: absolute;
+  top: 90px;
+  width: 100vw;
   left: 50%;
-  right: 50%;
-  transform: translate(-50%, -10%);
-  top: 330px;
-  .slick-slider {
-    position: relative;
+  transform: translateX(-50%);
 
-    display: block;
-    box-sizing: border-box;
-    user-select: none;
-    touch-action: pan-y;
-    -webkit-tap-highlight-color: transparent;
+  @media (max-width: 980px) {
+    top: 180px;
   }
 
-  .slick-list {
-    position: relative;
-
-    display: block;
-
-    margin: 0;
-    padding: 0;
-    svg {
-      @media (max-width: 640px) {
-        display: none !important;
-      }
-    }
-  }
-
-  .slick-list:focus {
-    outline: none;
-  }
-
-  .slick-list.dragging {
-    cursor: pointer;
-    cursor: hand;
-  }
-
-  .slick-slider .slick-track,
-  .slick-slider .slick-list {
-    transform: translate3d(0, 0, 0);
-  }
-
-  .slick-track {
-    position: relative;
-    top: 0;
-    left: 0;
-
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .slick-track:before,
-  .slick-track:after {
-    display: table;
-
-    content: '';
-  }
-
-  .slick-track:after {
-    clear: both;
-  }
-
-  .slick-loading .slick-track {
-    visibility: hidden;
-  }
-
-  .slick-arrow {
-    position: absolute;
-    right: 50%;
-    left: 50%;
-    margin: 0 auto;
-    z-index: 10;
-    width: 27px;
-    height: 27px;
-    &:hover {
-      cursor: pointer;
-    }
-    svg {
-    }
-    &.slick-prev {
-      transform: translate(-330px, 140px);
-    }
-    &.slick-next {
-      transform: translate(330px, -170px);
-    }
-  }
-
-  .slick-slide {
-    display: none;
-    float: left;
-    height: 100%;
-    min-height: 1px;
-    position: relative;
+  .swiper-slide {
+    height: 960px;
     opacity: 1;
-    transition: all 1s ease;
-    &:not(.slick-current):not(.slick-center) {
-      transform: translateY(200px);
-      & > div > div {
-        opacity: 0;
-      }
-      & > div:before {
-        width: 220px;
-        height: 220px;
-        opacity: 0.3;
-      }
+    transition: transform 1s ease;
+    bottom: 130px;
+    @media (max-width: 980px) {
+      height: 800px;
     }
     h2 {
       color: #fff;
-      margin-bottom: 10px;
+      margin-bottom: 24px;
     }
     h4 {
       color: #fff;
     }
-    p {
+    p:not(.author) {
       padding-left: 20px;
       border-left: 3px solid #fff;
       color: #fff;
     }
 
+    p.author {
+      font-style: italic;
+    }
     & > div {
       width: 320px;
       margin: 0 auto;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      left: 50%;
       &:before {
         transition: all 1s ease;
         width: 520px;
@@ -248,7 +132,7 @@ const Wrapper = styled.div`
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%) rotate(150deg);
-        @media (max-width: 640px) {
+        @media (max-width: 980px) {
           width: 460px;
           height: 460px;
         }
@@ -269,125 +153,85 @@ const Wrapper = styled.div`
         left: 50%;
         top: 50%;
         transform: translate(-42%, -56%) rotate(150deg);
-        @media (max-width: 640px) {
+        @media (max-width: 980px) {
           width: 460px;
           height: 460px;
         }
       }
     }
+    &:not(.swiper-slide-active):not(.swiper-slide-duplicate-active) {
+      transform: translateY(200px);
+      & > div > div {
+        opacity: 0;
+      }
+      & > div:before {
+        width: 220px;
+        height: 220px;
+        opacity: 0.3;
+      }
+    }
   }
-
-  .slick-slide img {
+  .custom-swiper-button-next,
+  .custom-swiper-button-prev {
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    z-index: 10;
+    width: 27px;
+    height: 27px;
+    margin: 0px auto;
+    transform: translate(330px, -610px);
     display: block;
+    cursor: pointer;
+
+    @media (max-width: 740px) {
+      display: none;
+    }
+  }
+  .custom-swiper-button-prev {
+    transform: translate(-320px, -610px);
   }
 
-  .slick-slide.slick-loading img {
-    display: none;
-  }
-
-  .slick-slide.dragging img {
-    pointer-events: none;
-  }
-
-  .slick-initialized .slick-slide {
-    display: block;
-    min-height: 310px;
-    text-align: left;
-  }
-
-  .slick-loading .slick-slide {
-    visibility: hidden;
-  }
-
-  .slick-vertical .slick-slide {
-    display: block;
-
-    height: auto;
-    border: 1px solid transparent;
-  }
-
-  .slick-arrow.slick-hidden {
-    display: none;
-  }
-
-  .slick-dots {
-    display: grid !important;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 20px;
-    margin-bottom: 40px;
-    position: relative;
-    /* max-width: 90vw; */
-    height: 300px;
-    margin: 0 auto;
-    justify-items: center;
+  .swiper-pagination {
+    grid-template-columns: repeat(4, 1fr);
+    height: 180px;
     align-items: center;
-    max-width: 100vw;
-    @media (min-width: 1200px) {
-      max-width: 1200px;
-    }
-    @media (max-width: 980px) {
-      grid-template-columns: repeat(3, 1fr);
-    }
+    display: grid !important;
+    gap: 20px;
+    width: 100%;
+    margin: 0px auto;
+    padding: 0px 80px;
+    justify-items: center;
+    max-width: 900px;
+    position: absolute;
+    left: 50%;
+    bottom: 170px;
+    transform: translateX(-50%);
 
-    @media (max-width: 640px) {
-      grid-template-columns: repeat(5, 1fr);
-      grid-gap: 0;
-      height: 110px;
-      max-width: 220px;
-      top: 60px;
-      img {
-        display: none;
-      }
-      div {
-        width: 100%;
-        height: 100%;
-        cursor: pointer;
-      }
-    }
-    li {
-      display: inline-block;
-      background: #fff;
-      border-radius: 10px;
-      transition: box-shadow 0.2s ease-out;
-      position: relative;
-      border-radius: 10px;
+    .swiper-pagination-bullet {
+      cursor: pointer;
       width: 100%;
       height: 160px;
       position: relative;
       display: flex;
-      @media (max-width: 640px) {
-        background: #c4c4c4;
-        border-radius: 50%;
-        width: 18px;
-        height: 18px;
-        display: inline-block;
-        &.slick-active {
-          background: #ff4b47;
-        }
-      }
-      &.slick-active {
+      background: rgb(255, 255, 255);
+      transition: box-shadow 0.2s ease-out 0s;
+      border-radius: 10px;
+      opacity: 1;
+      &.swiper-pagination-bullet-active,
+      &:hover {
         img {
-          filter: grayscale(0%);
-          opacity: 1;
+          filter: grayscale(0%) !important;
+          opacity: 1 !important;
         }
       }
+
       &:hover {
         box-shadow: 0px 35.9734px 57.5575px rgba(0, 0, 0, 0.2);
-        img {
-          filter: grayscale(0%);
-          opacity: 1;
-        }
-      }
-      button {
-        cursor: pointer;
-        width: 100%;
-        height: 100%;
-        background: none;
       }
       img {
         filter: grayscale(100%);
         opacity: 0.4;
-        transition: opacity 0.2s ease-out, filter 0.2s ease-out;
         width: auto;
         max-width: 80%;
         max-height: 70%;
@@ -397,6 +241,32 @@ const Wrapper = styled.div`
         right: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        transition: opacity 0.2s ease-out 0s, filter 0.2s ease-out 0s;
+      }
+      @media (max-width: 980px) {
+        background: #c4c4c4;
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+        &.swiper-pagination-bullet-active {
+          background: #ff4b47;
+        }
+      }
+    }
+    @media (max-width: 980px) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 0;
+      height: 110px;
+      max-width: 220px;
+      bottom: 180px;
+      img {
+        display: none;
+      }
+      div {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
       }
     }
   }

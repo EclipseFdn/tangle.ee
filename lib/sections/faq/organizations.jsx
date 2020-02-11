@@ -2,14 +2,13 @@ import React from 'react'
 
 export default [
   {
-    q: 'Why would I want to join a task force?',
+    q: 'Why would I want to join a Tangle EE project?',
     a: (
       <>
-        <span className="bold">To have your say on IOTA development:</span>
+        <span className="bold">To have your say on IOTA development: </span>
         {'    '}
-        Tangle EE task forces provide an environment for developing open-source specifications, reference implementations, and
-        software. By joining a task force and providing insight, you can ensure the technology meets the needs of your
-        organization.
+        Tangle EE projects provide an environment for developing open-source specifications, reference implementations, and
+        software. By joining a project and providing insight, you can ensure the technology meets the needs of your organization.
       </>
     )
   },
@@ -39,7 +38,7 @@ export default [
     )
   },
   {
-    q: 'Do I have to pay to use a project?',
+    q: 'Do I have to pay to join?',
     a: (
       <div>
         <span className="bold">It depends on your organization: </span>

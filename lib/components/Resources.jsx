@@ -48,7 +48,7 @@ function Resources(props) {
       {data.map((resource) => (
         <a key={`resource-${resource.type}`} href={resource.to} target="_blank" rel="noreferrer noopener">
           <img alt="" src={getIconData(resource.type).icon} />
-          <p className="bold">{getIconData(resource.type).text}</p>
+          <p className="bold">{resource.text || getIconData(resource.type).text}</p>
         </a>
       ))}
     </Wrapper>

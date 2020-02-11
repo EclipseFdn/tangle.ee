@@ -49,7 +49,7 @@ const Wrapper = styled.section`
   }
 
   @media (max-width: 980px) {
-    background: url('static/images/woman_in_hand.svg');
+    background: url('/images/woman_in_hand.svg');
     background-repeat: no-repeat;
     background-size: auto 150%;
     padding-top: 100px;

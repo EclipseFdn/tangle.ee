@@ -3,18 +3,18 @@ import Fade from 'react-reveal/Fade'
 
 import Header from '@sections/Header'
 import Footer from '@sections/Footer'
-import Landing from '@sections/community/Landing'
-import Topics from '@sections/community/Topics'
-import Meetup from '@sections/community/Meetup'
+import Landing from '@sections/about/Landing'
+import Topics from '@sections/about/Topics'
+import Meetup from '@sections/about/Meetup'
 import Distribution from '@sections/distribution/Distribution'
 import TopicAnimationWrapper from '@sections/TopicAnimationWrapper'
 
 import LinkAction from '@components/LinkAction'
 import Resources from '@components/Resources'
 
-import RunningWoman from '@animations/community/runningwoman/RunningWoman'
-import GrowingTree from '@animations/community/growingtree/GrowingTree'
-import Marker from '@animations/community/marker/Marker'
+import RunningWoman from '@animations/about/runningwoman/RunningWoman'
+import GrowingTree from '@animations/about/growingtree/GrowingTree'
+import Marker from '@animations/about/marker/Marker'
 
 const Organizations = () => {
   const whatWeSayData = [
@@ -47,11 +47,6 @@ const Organizations = () => {
       title: 'Terry Shane, Founder of bIOTAsphere.com',
       quote:
         '“It’s rare to see the vision & passion personified by the IF team. Focused on advancing the global state of knowledge in DLT and cryptography, they never resort to hype & hyperbole. I am fortunate to have discovered IOTA in its early stages and look forward to contributing to its continued growth & success.”'
-    },
-    {
-      img: '/images/people/user_photo_1.png',
-      title: 'Pr Manager at XY  Foundation',
-      quote: '“Learn more about the Eclipse Foundation and the benefits it offers”'
     }
   ]
   return (
@@ -59,13 +54,13 @@ const Organizations = () => {
       <Header />
       <Landing>
         <article>
-          <h1>Community</h1>
-          <h3>Passionate developers building commercially friendly projects</h3>
+          <h1>A Digital Trust Layer</h1>
+          <h3>IOTA’s Tangle technology provides truth, reliability and security connecting our digital and physical worlds.</h3>
           <p>
-            Network with talented developers and learn about IOTA technology to lead the way towards commercial applications of
-            Tangle EE projects.
+            The Tangle is a permissionless, feeless, scalable distributed ledger, designed to support trustworthy data and value
+            transfer between humans and machines.
           </p>
-          <LinkAction to="/">View Eclipse Hub</LinkAction>
+          <LinkAction to="https://www.iota.org/">Visit the IOTA Site</LinkAction>
           <RunningWoman />
         </article>
       </Landing>
@@ -73,19 +68,12 @@ const Organizations = () => {
         <article>
           <div>
             <Fade bottom duration={800} distance="10%">
-              <h2>Let´s collaborate</h2>
+              <h2>Grow and Learn</h2>
               <p>
-                Join in community discussions with other like-minded developers. Ask for help, offer advice, or simply spark
-                transparent, engaging discussions about technology.
+                Start your journey with IOTA by visiting our documentation portal. Find more information about how IOTA works,
+                what it enables and how you can use it.
               </p>
-              <Resources
-                data={[
-                  { type: 'github', to: '#' },
-                  { type: 'discord', to: '#' },
-                  { type: 'report', to: '#' },
-                  { type: 'proposal', to: '#' }
-                ]}
-              />
+              <LinkAction to="https://docs.iota.org/">IOTA Documentation</LinkAction>
             </Fade>
           </div>
           <aside>
@@ -101,13 +89,13 @@ const Organizations = () => {
             <Fade bottom duration={800} distance="0">
               <h1>
                 <small>Network</small>
-                Join our Meetups
+                Discover the IOTA Ecosystem
               </h1>
               <p>
-                Grow your network and connect with developers in your local area. We’ll be announcing local meet-ups as they
-                happen. Be sure to register your interest and stay up-to-date!
+                Discover IOTA projects, view meet-ups or connect with developers. The IOTA ecosystem is a thriving community of
+                developers and technologists committed to innovating with IOTA technologies.
               </p>
-              <LinkAction to="/">View Eclipse Hub</LinkAction>
+              <LinkAction to="https://ecosystem.iota.org/">Visit Ecosystem</LinkAction>
             </Fade>
           </div>
           <aside>
@@ -117,7 +105,7 @@ const Organizations = () => {
           </aside>
         </article>
       </Meetup>
-      <Distribution title="What we say" data={whatWeSayData} actionLink={{ to: '#', label: 'Request Membership' }} />
+      <Distribution title="What we say" data={whatWeSayData} actionLink={{ to: 'https://discord.iota.org', label: 'Visit our Discord' }} />
       <Footer />
     </>
   )

@@ -76,7 +76,7 @@ const Wrapper = styled.section`
 
   svg.section-background:nth-child(1) {
     position: absolute;
-    top: 200px;
+    top: -10px;
     left: 0;
     @media (max-width: 980px) {
       display: none;
@@ -85,9 +85,9 @@ const Wrapper = styled.section`
 
   svg.section-background:nth-child(2) {
     position: absolute;
-    top: 39%;
+    bottom: -170px;
     right: 0;
-    width: 74%;
+    width: 64%;
     height: auto;
     opacity: 0.2;
     @media (max-width: 980px) {
@@ -150,6 +150,7 @@ const Wrapper = styled.section`
     > div {
       flex-grow: 1;
       flex-basis: 0;
+      max-width: 500px;
       @media (max-width: 980px) {
         flex: 1 0 100%;
       }

@@ -93,7 +93,9 @@ const Footer = () => {
                       {menuItem.children.map((submenuItem) => {
                         return (
                           <li key={submenuItem.name}>
-                            <a href={submenuItem.to} target="_blank" rel="noreferrer noopener">{submenuItem.name}</a>
+                            <a href={submenuItem.to} target="_blank" rel="noreferrer noopener">
+                              {submenuItem.name}
+                            </a>
                           </li>
                         )
                       })}
@@ -148,6 +150,9 @@ const Wrapper = styled.footer`
     grid-gap: 26px;
     margin-bottom: 180px;
     padding-top: 40px;
+    @media (min-width: 980px) and (max-width: 1300px) {
+      margin-bottom: 140px;
+    }
 
     > div {
       > .toggle {
@@ -157,6 +162,11 @@ const Wrapper = styled.footer`
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 26px;
+        min-width: 500px;
+
+        @media (max-width: 980px) {
+          min-width: inherit;
+        }
       }
     }
 

@@ -80,7 +80,7 @@ const Wrapper = styled.section`
   }
 
   @media (max-width: 980px) {
-    background: url('static/images/floating_man.svg');
+    background: url('/images/floating_man.svg');
     background-repeat: no-repeat;
     background-size: auto 70%;
     padding-top: 100px;
@@ -119,6 +119,7 @@ const Wrapper = styled.section`
   svg.background:nth-child(2) {
     max-width: 160%;
     height: 170px;
+    top: -50px;
     @media (max-width: 980px) {
       display: none;
     }

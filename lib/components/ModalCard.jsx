@@ -92,6 +92,7 @@ const StyledModal = styled(ReactModalAdapter)`
     position: relative;
     display: flex;
     flex-direction: column;
+    max-height: 80vh;
 
     @media (max-width: 640px) {
       padding: 200px 30px 30px 30px;

@@ -80,6 +80,7 @@ const Picture = styled.div`
 
 const Wrapper = styled.section`
   padding: 80px 0;
+  overflow: hidden;
   position: relative;
 
   article:nth-of-type(2) {
@@ -99,7 +100,7 @@ const Wrapper = styled.section`
 
   .distribution-wrapper {
     position: relative;
-    min-height: 900px;
+    min-height: 700px;
 
     @media (max-width: 980px) {
       display: flex;
@@ -135,7 +136,7 @@ const Wrapper = styled.section`
       }
       &:nth-child(3) {
         left: 70%;
-        top: 13%;
+        top: 33%;
         z-index: 3;
       }
       &:nth-child(4) {

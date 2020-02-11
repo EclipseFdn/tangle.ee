@@ -23,20 +23,17 @@ const Organizations = () => {
       <Landing>
         <article>
           <h1>Work towards a shared vision</h1>
-          <h3>Collaborate towards the future of IOTA innovations</h3>
+          <h3>Collaborate in building innovative solutions on IOTA</h3>
           <p>
             Tangle EE provides an opportunity to:
             <ul className="bullet-list">
-              <li>Join project task forces to have your say about the direction of IOTA development</li>
+              <li>Join projects and have your say about the direction of IOTA development</li>
               <li>Network with other member organizations</li>
               <li>Interact with the Eclipse and IOTA developer communities</li>
             </ul>
           </p>
-          <p>
-            To join a task force, work on a project, and have your say in the future of IOTA development, become a member of the
-            Tangle EE Working Group.
-          </p>
-          <LinkAction to="mailto:contact@iota.org">Contact us</LinkAction>
+          <p>To join a project and have your say, become a member of the Tangle EE Working Group.</p>
+          <LinkAction to="mailto:tangle-ee@iota.org">Contact us</LinkAction>
           <WomanOnHand />
         </article>
       </Landing>
@@ -68,8 +65,8 @@ const Organizations = () => {
             <Fade className="custom-position" bottom duration={800} distance="20%">
               <Card
                 imagePath="/images/organizations_icon.svg"
-                title="Grow your development team"
-                content="Allow your developers to collaborate with experts and use commercially oriented best practices."
+                title="Enrich your development team"
+                content="Allow your developers to collaborate with experts and reap the benefits of open source."
                 className="card custom-position"
               />
             </Fade>
@@ -77,8 +74,8 @@ const Organizations = () => {
             <Fade className="custom-position" bottom duration={800} distance="20%">
               <Card
                 imagePath="/images/fileshare.svg"
-                title="Make interoperable products"
-                content="Develop products that are compatible with each other and more valuable to customers."
+                title="Boost your innovation"
+                content="Build innovative solutions across data, identity and payments."
                 className="card custom-position"
               />
             </Fade>
@@ -86,7 +83,7 @@ const Organizations = () => {
               <Card
                 imagePath="/images/lightbulb.svg"
                 title="Improve your reputation"
-                content="Show others the quality of your work and the positive impact it has on the technology."
+                content="Show others the quality of your work and the positive impact it provides."
                 className="card custom-position"
               />
             </Fade>
