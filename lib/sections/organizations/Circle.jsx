@@ -77,6 +77,12 @@ const Wrapper = styled.section`
   justify-content: center;
   min-height: calc(100vh - 110px);
 
+  @media (min-width: 1500px) {
+    min-height: inherit;
+    height: calc(100vh - 110px);
+    max-height: 1000px;
+  }
+
   @media (max-width: 700px) {
     margin-bottom: 140px;
     margin-top: 30px;

@@ -80,18 +80,21 @@ const NotFound = () => {
 
 const Wrapper = styled.section`
   position: relative;
-  min-height: calc(100vh - 110px);
+  height: calc(100vh - 110px);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 0;
 
-  h3 {
-    text-transform: none;
-  }
+  max-height: 850px;
+  min-height: 730px;
 
   @media (max-width: 1190px) {
-    min-height: calc(100vh - 60px);
+    height: calc(100vh - 60px);
+  }
+
+  h3 {
+    text-transform: none;
   }
 
   > svg.background {
@@ -114,6 +117,7 @@ const Wrapper = styled.section`
     top: inherit;
     left: inherit;
     opacity: 0.2;
+    max-height: 500px;
   }
 
   .dandelion {
