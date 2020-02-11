@@ -60,6 +60,7 @@ const Wrapper = styled.section`
       &:first-of-type {
         svg {
           width: 100%;
+          max-width: 780px;
         }
       }
     }
@@ -89,6 +90,7 @@ const Wrapper = styled.section`
         overflow: hidden;
         svg {
           width: 100%;
+          max-width: 390px;
         }
       }
     }

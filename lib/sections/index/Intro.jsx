@@ -56,10 +56,17 @@ const Wrapper = styled.section`
   color: #fff;
   background: linear-gradient(180deg, #fff 0%, #eff4f8 100%);
   position: relative;
-  min-height: calc(100vh - 110px);
+  height: calc(100vh - 110px);
   display: flex;
   align-items: center;
   justify-content: center;
+
+  max-height: 850px;
+  min-height: 730px;
+
+  @media (max-width: 1190px) {
+    height: calc(100vh - 60px);
+  }
 
   article,
   > img {
@@ -83,14 +90,14 @@ const Wrapper = styled.section`
 
   svg.background {
     position: absolute;
-    top: -50px;
+    top: -100px;
     left: 0;
     width: 100%;
     min-width: 1380px;
     z-index: -10;
     @media (max-width: 980px) {
       min-height: 130%;
-      top: 0px;
+      top: -20px;
       left: inherit;
       right: 0;
     }

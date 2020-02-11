@@ -27,7 +27,7 @@ const Organizations = () => {
     {
       img: '/images/people/daniel.jpg',
       title:
-        'Daniel Trauth, Founder of Industrial IOTA Lab Aachen OR Daniel Trauth, Chief Engineer WZL of RWTH Aachen University',
+        'Daniel Trauth, Division Director Digital Transformation of Manufacturing Technologies WZL of RWTH Aachen University',
       quote:
         '“IOTA is not only a technology, but also an inspiration and motivator for developing the future of a machine economy.”'
     },
@@ -105,7 +105,11 @@ const Organizations = () => {
           </aside>
         </article>
       </Meetup>
-      <Distribution title="What we say" data={whatWeSayData} actionLink={{ to: 'https://discord.iota.org', label: 'Visit our Discord' }} />
+      <Distribution
+        title="What we say"
+        data={whatWeSayData}
+        actionLink={{ to: 'https://discord.iota.org', label: 'Visit our Discord' }}
+      />
       <Footer />
     </>
   )

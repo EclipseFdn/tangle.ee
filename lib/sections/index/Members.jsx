@@ -23,7 +23,7 @@ const Wrapper = styled.section`
   position: relative;
 
   @media (max-width: 980px) {
-    padding-bottom: 50px;
+    padding: 50px 0px;
   }
 
   h2 {

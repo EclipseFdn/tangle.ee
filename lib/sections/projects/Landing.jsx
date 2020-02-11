@@ -70,13 +70,15 @@ Landing.propTypes = {
 
 const Wrapper = styled.section`
   position: relative;
-  min-height: calc(100vh - 110px);
+  height: calc(100vh - 110px);
   display: flex;
   align-items: center;
   justify-content: center;
+  max-height: 850px;
+  min-height: 730px;
 
   @media (max-width: 1190px) {
-    min-height: calc(100vh - 60px);
+    height: calc(100vh - 60px);
   }
 
   @media (max-width: 980px) {
