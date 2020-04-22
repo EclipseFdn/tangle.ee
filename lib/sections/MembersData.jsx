@@ -94,6 +94,13 @@ const members = [
     url: 'https://www.rwth-aachen.de/'
   },
   {
+    name: 'Schluss',
+    description:
+      'Schluss is an app to safely share personal data. Schluss has a digital safe house for everyone. A secure place on the Internet where you can store all your personal information. Text, images, videos.',
+    logo: `${imgFolder}schluss_logo.png`,
+    url: 'https://www.schluss.org/'
+  },
+  {
     name: 'Software AG',
     description:
       'Software AG offers Freedom as a Service. We reimagine integration, spark business transformation and enable fast innovation on the Internet of Things so you can pioneer differentiating business models.  We give you the freedom to connect and integrate any technology—from app to edge. We help you free data from silos so it’s shareable, usable and powerful—enabling you to make the best decisions and unlock entirely new possibilities for growth.',
