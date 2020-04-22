@@ -117,6 +117,13 @@ const members = [
       'TM Forum provides an open, agile and collaborative environment that enables communications service providers and digital service providers to rapidly transform their business operations, IT systems and ecosystems to capitalize on the opportunities of the ever-evolving digital world. As a neutral, non-profit member organization, TMForum represents over 850 member companies, serving five billion customers across 180 countries.',
     logo: `${imgFolder}tmforum.png`,
     url: 'https://www.tmforum.org/'
+  },
+  {
+    name: 'Schluss',
+    description:
+      'Schluss is an app to safely share personal data. Schluss has a digital safe house for everyone. A secure place on the Internet where you can store all your personal information. Text, images, videos.',
+    logo: `${imgFolder}schluss_logo.png`,
+    url: 'https://www.schluss.org/'
   }
 ]
 
