@@ -66,6 +66,13 @@ const members = [
     url: 'https://www.geometricenergy.ca/'
   },
   {
+    name: 'IOTA Foundation',
+    description:
+      "IOTA redesigns the way people and devices connect to share information and value, removing fees and enhancing trust. We collaborate with our community and partners to deliver sustainable, real-world impact. Together, we are shaping a new digital economy, removing unnecessary friction and unlocking human potential. Our global network of thinkers, tinkerers, leaders and doers are working together to pioneer the future.",
+    logo: `${imgFolder}IOTA_Foundation_Logo.png`,
+    url: 'https://www.iota.org/'
+  },
+  {
     name: 'IoTIFY',
     description:
       "IOTIFY is a virtualization platform for the Internet of Things. IoTIFY is industry's first cloud-based IoT performance testing platform helping developers build scalable IoT applications handling millions of connected devices.",
@@ -124,6 +131,14 @@ const members = [
       'TM Forum provides an open, agile and collaborative environment that enables communications service providers and digital service providers to rapidly transform their business operations, IT systems and ecosystems to capitalize on the opportunities of the ever-evolving digital world. As a neutral, non-profit member organization, TMForum represents over 850 member companies, serving five billion customers across 180 countries.',
     logo: `${imgFolder}tmforum.png`,
     url: 'https://www.tmforum.org/'
+  }
+  ,
+  {
+    name: 'UiO - University of Oslo',
+    description:
+      'Through knowledge, responsibility and commitment we shall contribute to a sustainable future. We have shaped society for over 200 years and are a leading European university. For the next ten years, the University will promote independent, pioneering and long-term research and offer outstanding education. We shall strengthen the dialogue with the outside world and contribute to the use of knowledge.',
+    logo: `${imgFolder}UiO.png`,
+    url: 'https://www.uio.no//'
   }
 ]
 
