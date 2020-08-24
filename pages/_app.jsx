@@ -24,24 +24,32 @@ class Eclipse extends App {
   constructor(props) {
     super(props)
     this.state = {
-      loading: true
+      loading: true,
     }
   }
 
   componentDidMount() {
     setTimeout(() => {
       this.setState({
-        loading: false
+        loading: false,
       })
       global.document.getElementsByTagName('body')[0].className = 'loaded'
     }, 1500)
 
     initReactFastclick()
+
+    // google analytics page change detection
+    Router.events.on('routeChangeComplete', (url) => {
+      gtag('event', 'page_view', {
+        page_title: document.title,
+        page_location: document.location,
+        page_path: url,
+      })
+    })
   }
 
   render() {
     const { Component } = this.props
-
     return (
       <>
         <Head>
@@ -61,15 +69,14 @@ class Eclipse extends App {
           />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
-          {/* <script src="https://www.google.com/recaptcha/api.js" async defer></script> */}
           <script
             dangerouslySetInnerHTML={{
               __html: `
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', '${GA_TRACKING_ID}');
-`
+gtag('config', '${GA_TRACKING_ID}', {  send_page_view: false });
+`,
             }}
           />
         </Head>

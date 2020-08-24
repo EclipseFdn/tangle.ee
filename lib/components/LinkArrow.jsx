@@ -5,10 +5,11 @@ import PropTypes from 'prop-types'
 
 import theme from '@style/theme'
 
-const LinkArrow = ({ children, reverse, to, target }) => {
+const LinkArrow = ({ children, reverse, arrowPosition, to, target }) => {
   return (
     <Link href={to}>
       <Wrapper
+        arrowPosition={arrowPosition}
         href={to}
         className={reverse ? ' reverse' : ''}
         target={target}
@@ -31,13 +32,15 @@ const LinkArrow = ({ children, reverse, to, target }) => {
 LinkArrow.propTypes = {
   children: PropTypes.node.isRequired,
   reverse: PropTypes.bool,
+  arrowPosition: PropTypes.string,
   to: PropTypes.string.isRequired,
-  target: PropTypes.string
+  target: PropTypes.string,
 }
 
 LinkArrow.defaultProps = {
   reverse: false,
-  target: '_self'
+  arrowPosition: 'end',
+  target: '_self',
 }
 
 const Wrapper = styled.a`
@@ -50,6 +53,18 @@ const Wrapper = styled.a`
     border-radius: 28px;
     overflow: hidden;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    float: ${({ arrowPosition }) => {
+      if (arrowPosition === 'start') return 'left'
+      else return 'inherit'
+    }};
+    margin-left: ${({ arrowPosition }) => {
+      if (arrowPosition === 'start') return '0px'
+      else return 'inherit'
+    }};
+    margin-right: ${({ arrowPosition }) => {
+      if (arrowPosition === 'start') return '17px'
+      else return 'inherit'
+    }};
 
     svg {
       position: absolute;

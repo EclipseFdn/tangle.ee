@@ -8,10 +8,10 @@ const Slider = ({ children, settings }) => {
     ...settings,
     navigation: {
       nextEl: '.custom-swiper-button-next',
-      prevEl: '.custom-swiper-button-prev'
+      prevEl: '.custom-swiper-button-prev',
     },
     renderPrevButton: () => <CustomArrow className="custom-swiper-button-prev" type="prev" />,
-    renderNextButton: () => <CustomArrow className="custom-swiper-button-next" type="next" />
+    renderNextButton: () => <CustomArrow className="custom-swiper-button-next" type="next" />,
   }
   return (
     <Wrapper>
@@ -60,18 +60,18 @@ CustomArrow.propTypes = {
   className: PropTypes.string,
   style: PropTypes.shape(),
   onClick: PropTypes.func,
-  type: PropTypes.string.isRequired
+  type: PropTypes.string.isRequired,
 }
 
 CustomArrow.defaultProps = {
   className: '',
   style: null,
-  onClick: () => {}
+  onClick: () => {},
 }
 
 Slider.propTypes = {
   children: PropTypes.node.isRequired,
-  settings: PropTypes.shape().isRequired
+  settings: PropTypes.shape().isRequired,
 }
 
 const Wrapper = styled.div`
@@ -200,7 +200,7 @@ const Wrapper = styled.div`
     gap: 20px;
     width: 100%;
     margin: 0px auto;
-    padding: 0px 80px;
+    padding: 0px 58px;
     justify-items: center;
     max-width: 900px;
     position: absolute;
