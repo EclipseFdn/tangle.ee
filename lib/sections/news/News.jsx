@@ -393,6 +393,14 @@ const Wrapper = styled.section`
     }
 
     &.no-slider {
+      z-index: 2;
+
+      @media (min-width: 980px) {
+        .slick-slider {
+          display: none;
+        }
+      }
+
       > div:not(.events-heading) {
         display: flex;
         justify-content: space-between;
@@ -419,8 +427,6 @@ const Wrapper = styled.section`
         }
         position: relative;
       }
-
-      z-index: 2;
 
       .events-heading {
         position: relative;
@@ -509,6 +515,8 @@ const Wrapper = styled.section`
         }
       }
       @media (max-width: 980px) {
+        margin-top: 50px;
+
         li {
           padding: 0 22px;
           width: 100%;
