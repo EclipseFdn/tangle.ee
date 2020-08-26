@@ -55,15 +55,15 @@ const Wrapper = styled.a`
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     float: ${({ arrowPosition }) => {
       if (arrowPosition === 'start') return 'left'
-      else return 'inherit'
+      else return null
     }};
     margin-left: ${({ arrowPosition }) => {
       if (arrowPosition === 'start') return '0px'
-      else return 'inherit'
+      else return null
     }};
     margin-right: ${({ arrowPosition }) => {
       if (arrowPosition === 'start') return '17px'
-      else return 'inherit'
+      else return null
     }};
 
     svg {
