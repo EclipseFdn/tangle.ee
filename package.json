@@ -4,7 +4,7 @@
   "description": "Tangle.ee website",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "next dev -p 3000",
     "build": "next build && next export -o dist",
     "now-build": "next build && next export -o dist",
     "netlify-export": "next build && next export -o dist",
