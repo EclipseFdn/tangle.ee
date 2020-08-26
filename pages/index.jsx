@@ -7,6 +7,7 @@ import Members from '@sections/index/Members'
 import Topics from '@sections/index/Topics'
 import Principles from '@sections/index/Principles'
 import Progress from '@sections/index/Progress'
+import News from '@sections/news/News'
 import SlidingFooter from '@sections/index/SlidingFooter'
 import TopicAnimationWrapper from '@sections/TopicAnimationWrapper'
 import MembersData from '@sections/MembersData'
@@ -160,6 +161,7 @@ const Index = () => {
           </Fade>
         </ul>
       </Principles>
+      <News />
       <Progress>
         <Fade bottom duration={800} distance="10%">
           <h2>Follow the Progress of Tangle EE as it Develops</h2>

@@ -14,7 +14,7 @@ const Members = ({ children }) => (
 )
 
 Members.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 }
 
 const Wrapper = styled.section`
@@ -34,6 +34,10 @@ const Wrapper = styled.section`
 
     @media (max-width: 980px) {
       margin-bottom: 35px;
+    }
+
+    @media (max-width: 640px) {
+      margin-top: -60px;
     }
   }
 

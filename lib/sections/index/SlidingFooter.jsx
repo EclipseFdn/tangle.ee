@@ -23,7 +23,7 @@ const SlidingFooter = ({ children }) => {
 
   return (
     <Wrapper ref={footer}>
-      <Parallax ref={footerInner} onMove={updateFooter} speed={6} percentage={0}>
+      <Parallax ref={footerInner} onMove={updateFooter} speed={5} percentage={0.17}>
         <section className="join">
           <div>
             <article>{children}</article>
@@ -37,7 +37,7 @@ const SlidingFooter = ({ children }) => {
 }
 
 SlidingFooter.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 }
 
 const Wrapper = styled.section`
