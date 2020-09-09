@@ -255,7 +255,7 @@ const Wrapper = styled.div`
       }
     }
     @media (max-width: 980px) {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       grid-gap: 0;
       height: 110px;
       max-width: 220px;
