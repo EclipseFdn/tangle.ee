@@ -193,7 +193,7 @@ const Wrapper = styled.div`
   }
 
   .swiper-pagination {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     height: 180px;
     align-items: center;
     display: grid !important;
@@ -202,7 +202,7 @@ const Wrapper = styled.div`
     margin: 0px auto;
     padding: 0px 58px;
     justify-items: center;
-    max-width: 900px;
+    max-width: 720px;
     position: absolute;
     left: 50%;
     bottom: 170px;
@@ -255,7 +255,7 @@ const Wrapper = styled.div`
       }
     }
     @media (max-width: 980px) {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       grid-gap: 0;
       height: 110px;
       max-width: 220px;
