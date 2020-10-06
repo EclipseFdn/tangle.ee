@@ -1,23 +1,6 @@
 const imgFolder = '/images/partners/'
 const members = [
   {
-    name: 'accessec',
-    description:
-      'accessec is a German security system company working to make the digital transformation secure within industrial IT, the automotive industry and identity centric security among others.',
-    logo: `${imgFolder}Accessec_logo.png`,
-    quote:
-      'Accessec is delighted to join the Eclipse foundation and Tangle EE Working Group, supporting the IOTA Foundation in developing, designing and implementing solutions on IOTA’s technology.',
-    author: 'Sven Feuchtmüller, Chief Technology Officer',
-    url: 'https://accessec.com/',
-  },
-  {
-    name: 'AKITA',
-    description:
-      'AKITA is building tangible, live prototypes supported by the IOTA Foundation, EDF Development Fund and based on the Tangle network technology to empower the Machine Economy.',
-    logo: `${imgFolder}akita.jpg`,
-    url: 'https://m2m.akitablock.io/',
-  },
-  {
     name: 'BiiLabs',
     description:
       'BiiLabs is a technology-driven software company providing components and services for distributed ledger infrastructure in the field of industrial and energy-efficient applications.',
