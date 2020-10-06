@@ -47,7 +47,7 @@ const News = ({ children, className }) => {
           })
           .map(({ date, title, body, link }, i) => {
             const jsDate = new Date(Date.parse(date))
-            const formattedDate = `${jsDate.getDate()}.${jsDate.getMonth()}.${jsDate.getFullYear()}`
+            const formattedDate = `${jsDate.getDate()}.${jsDate.getMonth() + 1}.${jsDate.getFullYear()}`
             return (
               <li className="newItem" key={i}>
                 <small>{formattedDate}</small>
@@ -68,7 +68,7 @@ const News = ({ children, className }) => {
       .filter((event, index) => index === 0)
       .map(({ date, title, description, infoLink }, i) => {
         const jsDate = new Date(Date.parse(date))
-        const formattedDate = `${jsDate.getDate()}.${jsDate.getMonth()}.${jsDate.getFullYear()}`
+        const formattedDate = `${jsDate.getDate()}.${jsDate.getMonth() + 1}.${jsDate.getFullYear()}`
         return (
           <li className="eventItem" key={i}>
             <small>{formattedDate}</small>
