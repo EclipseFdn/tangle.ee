@@ -1,16 +1,6 @@
 const imgFolder = '/images/partners/'
 const members = [
   {
-    name: 'BiiLabs',
-    description:
-      'BiiLabs is a technology-driven software company providing components and services for distributed ledger infrastructure in the field of industrial and energy-efficient applications.',
-    logo: `${imgFolder}BiiLabs_logo.png`,
-    quote:
-      'As a member of Eclipse Foundation, BiiLabs will contribute our engineering team’s distributed ledger technology expertise to support the development of open-source software. We will establish a high-level delivery plan for Tangle EE within the working group.',
-    author: 'Jim Huang, Co-Founder & CTO of BiiLabs',
-    url: 'https://biilabs.io/',
-  },
-  {
     name: 'Calypso Networks Association',
     description:
       'Calypso Networks Association (CNA) is a non-profit association created in 2003 by OTLIS-Lisbon, ACTV-Venice, STIB-Brussels, LKRKN-Constance, RATP & SNCF-Paris dedicated to develop and promote Contactless Ticketing Standard CALYPSO®. Calypso is a contactless ticketing standard, managed by its users deployed in more than 25 countries and 150 major cities in the world accessible to any supplier, and used by ticketing systems in many transport networks and parkings around the world for more than 15 years. Further than public transport, Calypso provides multiservice applications for leisure, access control, bike, car sharing… CNA has also in its main missions to promote Calypso on a global scale, to provide support to its 120 members and to facilitate and harmonize the shared members’ needs and experiences.',
