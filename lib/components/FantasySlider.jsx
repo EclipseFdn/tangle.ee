@@ -10,8 +10,8 @@ const Slider = ({ children, settings }) => {
       nextEl: '.custom-swiper-button-next',
       prevEl: '.custom-swiper-button-prev',
     },
-    renderPrevButton: () => <CustomArrow className="custom-swiper-button-prev" type="prev" />,
-    renderNextButton: () => <CustomArrow className="custom-swiper-button-next" type="next" />,
+    renderPrevButton: () => <CustomArrow className="custom-swiper-button-prev" type="prev" style={{display:'none'}} />,
+    renderNextButton: () => <CustomArrow className="custom-swiper-button-next" type="next" style={{display:'none'}} />,
   }
   return (
     <Wrapper>

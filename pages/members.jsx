@@ -16,25 +16,26 @@ import LinkAction from '@components/LinkAction'
 
 const Members = () => {
   const sliderSettings = {
-    loop: true,
-    slidesPerView: 3,
+    loop: false,
+    slidesPerView: 1,
     centeredSlides: true,
+    watchOverflow: true,
     // spaceBetween: 20,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      renderBullet: (index, className) => {
-        return `<button class="${className}" type="button"><div/><img src=${
-          MembersData.filter((member) => member.quote)[index].logo
-        } /></span>`
-      }
-    },
+    // pagination: {
+    //   el: '.swiper-pagination',
+    //   clickable: true,
+    //   renderBullet: (index, className) => {
+    //     return `<button class="${className}" type="button"><div/><img src=${
+    //       MembersData.filter((member) => member.quote)[index].logo
+    //     } /></span>`
+    //   }
+    // },
     breakpoints: {
       0: {
         slidesPerView: 1
       },
       980: {
-        slidesPerView: 3
+        slidesPerView: 1
       }
     }
   }

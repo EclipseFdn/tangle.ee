@@ -49,7 +49,7 @@ const Wrapper = styled.section`
   color: #fff;
   background: linear-gradient(180deg, #fff 0%, #eff4f8 100%);
   position: relative;
-  min-height: 1015px;
+  min-height: 945px;
   display: flex;
   background-color: #f2f8fa;
 
@@ -127,7 +127,7 @@ const Wrapper = styled.section`
 
   @media (max-width: 980px) {
     padding-top: 95px;
-    height: 865px;
+    height: 805px;
     min-height: inherit;
 
     article {
@@ -152,7 +152,7 @@ const Wrapper = styled.section`
   @media (max-width: 980px) {
     padding-top: 135px;
     height: inherit;
-    min-height: 865px;
+    min-height: 805px;
   }
   .decoration-1 {
     position: absolute;
