@@ -15,13 +15,6 @@ const members = [
     url: 'http://www.delltechnologies.com/',
   },
   {
-    name: 'Energinet',
-    description:
-      'Energinet is an independent public enterprise owned by the Danish Ministry of Climate, Energy and Utilities. Energinet owns, operates and develops the transmission systems for electricity and natural gas in Denmark.',
-    logo: `${imgFolder}energinet.png`,
-    url: 'https://en.energinet.dk/',
-  },
-  {
     name: 'ENGIE Lab Crigen',
     description:
       'ENGIE Lab CRIGEN, part of the ENGIE Labs network, is ENGIE Group’s corporate center for R&D and high-level expertise devoted to new energy resources (hydrogen, biogas and gas liquefaction), new energy uses in towns and cities, the buildings and industries of tomorrow and emerging technologies (computer sciences and Al, drones and robots, nanotechnologies and sensors).',
