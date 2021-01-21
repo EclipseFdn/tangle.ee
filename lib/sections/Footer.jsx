@@ -108,7 +108,7 @@ const Footer = () => {
         </div>
       </article>
       <article>
-        <small>Copyright @ Eclipse Foundation, Inc, All Rights Reserved.</small>
+        <small>Copyright @ Eclipse Foundation. All Rights Reserved.</small>
       </article>
       <svg viewBox="0 0 8960 7274" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="3621" cy="3653" r="3621" fill="url(#footer-bg-1)" />
