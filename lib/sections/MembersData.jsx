@@ -29,13 +29,6 @@ const members = [
     url: 'https://www.iota.org/',
   },
   {
-    name: 'IoTIFY',
-    description:
-      "IOTIFY is a virtualization platform for the Internet of Things. IoTIFY is industry's first cloud-based IoT performance testing platform helping developers build scalable IoT applications handling millions of connected devices.",
-    logo: `${imgFolder}IOTIFY-1.png`,
-    url: 'https://iotify.io/',
-  },
-  {
     name: 'Object Management Group',
     description:
       'The Object Management Group® (OMG®) is an international, open membership, not-for-profit technology standards consortium, founded in 1989. OMG standards are driven by vendors, end-users, academic institutions and government agencies. OMG Task Forces develop enterprise integration standards for a wide range of technologies and an even wider range of industries.',
