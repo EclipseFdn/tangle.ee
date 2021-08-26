@@ -88,6 +88,13 @@ const members = [
     logo: `${imgFolder}UiO.png`,
     url: 'https://www.uio.no//',
   },
+  {
+    name: 'LINKS Foundation',
+    description:
+      'The LINKS Foundation is a non-profit private Foundation boosting the interaction between research and the business world towards the internationalization of the local socio-economic system. LINKS Foundation promotes and conducts cutting-edge technologies and innovative processes applied to real cases with an entrepreneurial approach, multidisciplinary and problem solving oriented, to face the challenges set by digital transformation and its impact on environment and society.',
+    logo: `${imgFolder}links.png`,
+    url: 'https://linksfoundation.com/',
+  },
 ]
 
 export default members
