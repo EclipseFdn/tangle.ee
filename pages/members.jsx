@@ -1,6 +1,8 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
 
+import { sortByName } from '../lib/utils'
+
 import Header from '@sections/Header'
 import Footer from '@sections/Footer'
 import Landing from '@sections/members/Landing'
@@ -15,6 +17,7 @@ import FantasySlider from '@components/FantasySlider'
 import LinkAction from '@components/LinkAction'
 
 const Members = () => {
+  const members = sortByName(MembersData)
   const sliderSettings = {
     loop: false,
     slidesPerView: 1,
@@ -32,12 +35,12 @@ const Members = () => {
     // },
     breakpoints: {
       0: {
-        slidesPerView: 1
+        slidesPerView: 1,
       },
       980: {
-        slidesPerView: 1
-      }
-    }
+        slidesPerView: 1,
+      },
+    },
   }
   return (
     <>
@@ -49,7 +52,8 @@ const Members = () => {
             <h6>Recently joined</h6>
           </div>
           <FantasySlider settings={sliderSettings}>
-            {MembersData.filter((member) => member.quote)
+            {members
+              .filter((member) => member.quote)
               .map((member, index) => {
                 if (index < 4) {
                   return (

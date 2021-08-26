@@ -1,6 +1,8 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
 
+import { sortByName } from '../lib/utils'
+
 import Header from '@sections/Header'
 import Intro from '@sections/index/Intro'
 import Members from '@sections/index/Members'
@@ -23,6 +25,7 @@ import StandingProgrammer from '@animations/index/standingprogrammer/StandingPro
 import StandingLady from '@animations/index/standinglady/StandingLady'
 
 const Index = () => {
+  const members = sortByName(MembersData)
   return (
     <>
       <Header />
@@ -39,7 +42,7 @@ const Index = () => {
           Our Members <LinkArrow to="/members">View member page</LinkArrow>
         </h2>
         <ul>
-          {MembersData.map((member) => {
+          {members.map((member) => {
             return (
               <ModalCard
                 key={member.name}
