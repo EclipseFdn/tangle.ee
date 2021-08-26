@@ -29,13 +29,6 @@ const members = [
     url: 'https://www.iota.org/',
   },
   {
-    name: 'IoTIFY',
-    description:
-      "IOTIFY is a virtualization platform for the Internet of Things. IoTIFY is industry's first cloud-based IoT performance testing platform helping developers build scalable IoT applications handling millions of connected devices.",
-    logo: `${imgFolder}IOTIFY-1.png`,
-    url: 'https://iotify.io/',
-  },
-  {
     name: 'Object Management Group',
     description:
       'The Object Management Group® (OMG®) is an international, open membership, not-for-profit technology standards consortium, founded in 1989. OMG standards are driven by vendors, end-users, academic institutions and government agencies. OMG Task Forces develop enterprise integration standards for a wide range of technologies and an even wider range of industries.',
@@ -94,6 +87,13 @@ const members = [
       'Through knowledge, responsibility and commitment we shall contribute to a sustainable future. We have shaped society for over 200 years and are a leading European university. For the next ten years, the University will promote independent, pioneering and long-term research and offer outstanding education. We shall strengthen the dialogue with the outside world and contribute to the use of knowledge.',
     logo: `${imgFolder}UiO.png`,
     url: 'https://www.uio.no//',
+  },
+  {
+    name: 'LINKS Foundation',
+    description:
+      'The LINKS Foundation is a non-profit private Foundation boosting the interaction between research and the business world towards the internationalization of the local socio-economic system. LINKS Foundation promotes and conducts cutting-edge technologies and innovative processes applied to real cases with an entrepreneurial approach, multidisciplinary and problem solving oriented, to face the challenges set by digital transformation and its impact on environment and society.',
+    logo: `${imgFolder}links.png`,
+    url: 'https://linksfoundation.com/',
   },
 ]
 
