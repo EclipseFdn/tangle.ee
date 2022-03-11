@@ -1,5 +1,12 @@
 # tangle.ee
 
+---
+**NOTE**
+
+This project was migrated to [Eclipse Gitlab](https://github.com/EclipseFdn/tagle.ee) on March 11, 2022.
+
+---
+
 This is the repository for the Tangle EE working group website.
 
 ## Getting started
