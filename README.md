@@ -3,7 +3,7 @@
 ---
 **NOTE**
 
-This project was migrated to [Eclipse Gitlab](https://github.com/EclipseFdn/tagle.ee) on March 11, 2022.
+This project was migrated to [Eclipse Gitlab](https://gitlab.eclipse.org/eclipsefdn/it/websites/tangle.ee) on March 11, 2022.
 
 ---
 
